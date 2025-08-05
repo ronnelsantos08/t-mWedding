@@ -1,0 +1,172 @@
+
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Great+Vibes&family=Lavishly+Yours&display=swap');
+
+    /* General styling to match the overall theme */
+    body {
+        background-color: #000;
+        color: #fff;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+        font-family: 'Cormorant Garamond', serif; /* Default font */
+    }
+
+    .invitation-container {
+        position: relative;
+        margin-top: -100px;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 5;
+        padding: 2rem;
+        text-align: center;
+        border-radius: 10px;
+        overflow: visible;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%; /* makes it more fluid for small screens */
+        box-sizing: border-box;
+        min-height: 100vh;
+        margin-bottom: 10%;
+    }
+    
+    /* Responsive, full cover background with grayscale + darken */
+    .invitation-container::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('/Invite/invite.jpg'); /* Using placeholder for Canvas */
+        background-size: cover; /* Key for responsive full-cover image */
+        background-repeat: no-repeat;
+        background-position: center;
+        filter: grayscale(100%) brightness(50%);
+        opacity: 1;
+        z-index: -1;
+    }
+    
+    /* Styles for the main invitation text */
+    .invitation-text {
+        font-family: "Lavishly Yours", cursive;
+        margin-top: 10%;
+        font-size: clamp(2rem, 3vw, 4rem); /* Adjusted max font size for readability */
+        font-weight: 400;
+        line-height: 1.5;
+        text-transform: none;
+        padding: 2rem;
+        transition: all 1s ease-out; /* Base transition */
+    }
+
+    /* Animation states for all animated elements */
+    .initial-fade-up {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    .animate-fade-up {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .initial-fade-right {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    .animate-fade-right {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .initial-fade-in {
+        opacity: 0;
+    }
+    .animate-fade-in {
+        opacity: 1;
+    }
+
+    /* New styles for the two-column message section */
+    .couple-messages-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        padding: 2rem 0;
+    }
+
+    .message-section {
+        flex: 1;
+        text-align: center;
+        padding: 1rem;
+        transition: all 1s ease-out; /* Base transition for message sections */
+    }
+
+    .message-section h2 {
+        font-family: 'Great Vibes', cursive;
+        font-size: clamp(1.5rem, 2vw, 3rem); /* Adjusted max font size */
+        margin-bottom: 1rem;
+    }
+    
+    .message-section img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-bottom: 1rem;
+        border: 2px solid #fff;
+    }
+
+    .message-divider {
+        width: 1px;
+        height: 250px;
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    /* Decorative Images */
+    .decoration-img {
+        position: absolute;
+        width: clamp(10rem, 15vw, 100rem); /* Responsive size */
+        height: auto;
+        z-index: 6; /* Above background, below main content */
+        animation: bounce 4s infinite ease-in-out;
+    }
+
+    .decoration-top-left {
+        top: -80px;
+        left: 20px;
+        animation-delay: 0s;
+    }
+
+    .decoration-bottom-right {
+        bottom: -100px;
+        right: 20px;
+        animation-delay: 0.5s; /* Slightly offset animation */
+    }
+
+    /* Bouncing animation keyframes */
+    @keyframes bounce {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-15px); } /* Adjust bounce height */
+    }
+
+    /* Media query for smaller screens to adjust the overlap and layout */
+    @media (max-width: 768px) {
+        .invitation-container {
+            margin-top: -50px;
+        }
+        .couple-messages-container {
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .message-divider {
+            display: none; /* Hide the vertical divider on mobile */
+        }
+     
+        .decoration-top-left {
+            top: -80px;
+            left: 10px;
+        }
+        .decoration-bottom-right {
+            bottom: -40px;
+            right: 10px;
+        }
+    }

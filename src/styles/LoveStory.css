@@ -1,0 +1,141 @@
+
+                    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Great+Vibes&display=swap');
+
+                    /* General styling */
+                    body {
+                        font-family: 'Cormorant Garamond', serif;
+                        background-color: #000;
+                        color: #fff;
+                        margin: 0;
+                        padding: 0;
+                        line-height: 1.6;
+                    }
+
+                    .love-story-container {
+                        padding: 4rem 2rem;
+                        max-width: 1000px;
+                        margin: 0 auto;
+                        text-align: center;
+                        overflow: hidden; /* For animation effects */
+                    }
+
+                    .love-story-title {
+                        font-family: 'Great Vibes', cursive;
+                        font-size: clamp(2.5rem, 8vw, 5rem);
+                        margin-bottom: 3rem;
+                        color: #fff;
+                    }
+
+                    .story-event {
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: 4rem;
+                        opacity: 0; /* Initial state for animation */
+                        transition: all 1s ease-out; /* Base transition */
+                    }
+
+                    .story-event.left {
+                        flex-direction: row;
+                    }
+
+                    .story-event.right {
+                        flex-direction: row-reverse;
+                    }
+
+                    .story-event-image {
+                        flex: 1;
+                        padding: 1rem;
+                    }
+
+                    .story-event-image img {
+                        width: 100%;
+                        height: auto;
+                        max-height: 350px;
+                        object-fit: cover;
+                        border-radius: 8px;
+                        filter: grayscale(100%) brightness(0.7);
+                        border: 1px solid rgba(255, 255, 255, 0.2);
+                    }
+
+                    .story-event-content {
+                        flex: 1;
+                        padding: 1rem 2rem;
+                        text-align: left;
+                    }
+
+                    .story-event.right .story-event-content {
+                        text-align: right;
+                    }
+
+                    .story-event-date {
+                        font-size: clamp(1.5rem, 1vw, 100rem);
+                        font-weight: 600;
+                        letter-spacing: 0.1em;
+                        text-transform: uppercase;
+                        color: rgba(255, 255, 255, 0.7);
+                        margin-bottom: 0.5rem;
+                    }
+
+                    .story-event-title {
+                        font-family: 'Cormorant Garamond', serif;
+                        font-size: clamp(1.8rem, 2vw, 100rem);
+                        font-weight: 600;
+                        margin-bottom: 1rem;
+                    }
+
+                    .story-event-description {
+                        font-size: clamp(1.2rem, 1vw, 100rem);
+                        line-height: 1.8;
+                    }
+
+                    /* Animation states */
+                    .initial-fade-up {
+                        opacity: 0;
+                        transform: translateY(50px);
+                    }
+                    .animate-fade-up {
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
+
+                    .initial-fade-right {
+                        opacity: 0;
+                        transform: translateX(-50px);
+                    }
+                    .animate-fade-right {
+                        opacity: 1;
+                        transform: translateX(0);
+                    }
+
+                    .initial-fade-in {
+                        opacity: 0;
+                    }
+                    .animate-fade-in {
+                        opacity: 1;
+                    }
+
+                    .initial-fade-left {
+                        opacity: 0;
+                        transform: translateX(50px);
+                    }
+                    .animate-fade-left {
+                        opacity: 1;
+                        transform: translateX(0);
+                    }
+
+                    /* Responsive adjustments */
+                    @media (max-width: 768px) {
+                        .story-event {
+                            flex-direction: column !important; /* Force column layout on small screens */
+                            text-align: center;
+                        }
+                        .story-event.right .story-event-content {
+                            text-align: center;
+                        }
+                        .story-event-image {
+                            padding: 0.5rem;
+                        }
+                        .story-event-content {
+                            padding: 1rem;
+                        }
+                    }

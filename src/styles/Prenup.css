@@ -1,0 +1,173 @@
+
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Great+Vibes&display=swap');
+
+    /* General styling */
+    body {
+        font-family: 'Cormorant Garamond', serif;
+        background-color: #000;
+        color: #fff;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+    }
+
+    .gallery-container {
+        padding: 4rem 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+        text-align: center;
+        overflow: hidden; /* For animation effects */
+    }
+
+    .gallery-title {
+        font-family: 'Great Vibes', cursive;
+        font-size: clamp(2.5rem, 8vw, 5rem);
+        margin-bottom: 3rem;
+        color: #fff;
+    }
+
+    .image-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem; /* Consistent spacing */
+        justify-content: center;
+    }
+
+    .image-item {
+        position: relative;
+        overflow: hidden;
+        border-radius: 8px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        cursor: pointer; /* Indicate clickable */
+        opacity: 0; /* Initial state for animation */
+        transform: translateY(20px); /* Initial state for fade-up */
+        transition: all 0.8s ease-out; /* Base transition */
+    }
+
+    .image-item img {
+        width: 100%;
+        height: 250px; /* Fixed height for consistency */
+        object-fit: cover; /* Ensures images cover the area without distortion */
+        filter: grayscale(100%) brightness(0.7); /* Grayscale effect */
+        transition: filter 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .image-item:hover img {
+        filter: grayscale(0%) brightness(1); /* Color on hover */
+        transform: scale(1.03); /* Slight zoom on hover */
+        box-shadow: 0 8px 16px rgba(255, 255, 255, 0.1); /* Elegant shadow */
+    }
+
+    /* Animation states */
+    .initial-fade-up {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    .animate-fade-up {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .initial-fade-in {
+        opacity: 0;
+    }
+    .animate-fade-in {
+        opacity: 1;
+    }
+
+    /* Modal (Lightbox) Styles */
+    .modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9); /* Dark overlay */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000; /* Ensure it's on top */
+        backdrop-filter: blur(5px); /* Subtle blur effect */
+    }
+
+    .modal-content {
+        position: relative;
+        max-width: 90%;
+        max-height: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .modal-image {
+        max-width: 100%;
+        max-height: 80vh; /* Limit image height within modal */
+        object-fit: contain;
+        border-radius: 8px;
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    }
+
+    .modal-close-button {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 2rem;
+        cursor: pointer;
+        z-index: 1001;
+        padding: 0.5rem;
+        border-radius: 50%;
+        transition: background-color 0.3s ease;
+    }
+
+    .modal-close-button:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .modal-nav-button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 3rem;
+        cursor: pointer;
+        padding: 1rem;
+        z-index: 1001;
+        transition: color 0.3s ease;
+    }
+
+    .modal-nav-button:hover {
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+    .modal-nav-button.left {
+        left: 1rem;
+    }
+
+    .modal-nav-button.right {
+        right: 1rem;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .gallery-container {
+            padding: 2rem 1rem;
+        }
+        .image-grid {
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Adjust min-width for smaller screens */
+        }
+        .image-item img {
+            height: 180px; /* Adjust height for smaller screens */
+        }
+        .modal-nav-button {
+            font-size: 2rem;
+            padding: 0.5rem;
+        }
+        .modal-close-button {
+            font-size: 1.5rem;
+        }
+    }

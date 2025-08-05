@@ -1,0 +1,147 @@
+
+    /* Import the new cursive font */
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Great+Vibes&display=swap');
+
+    /* General Styles */
+
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    /* Navbar Container */
+    .navbar {
+        padding: 1rem;
+        border-bottom: 1px solid #333;
+    }
+
+    .navbar-content {
+        display: flex;
+        flex-direction: row; /* Default desktop layout */
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 10%;
+        transition: flex-direction 0.3s ease;
+    }
+
+    /* Couple's Names - now using a cursive font */
+  .names h1 {
+    font-family: "Sassy Frass", cursive;
+        font-weight: 400; /* Great Vibes doesn't have a bold variant */
+        font-size: clamp(2rem, 6vw, 3rem);
+        letter-spacing: 0.1em;
+        text-transform: none; /* Cursive fonts look better without uppercase */
+    }
+
+    /* Hamburger Menu Button */
+    .hamburger-menu {
+        background: none;
+        border: none;
+        cursor: pointer;
+        display: none; /* Hidden on desktop */
+        padding: 0.5rem;
+    }
+
+    .hamburger-icon {
+        width: 25px;
+        height: 25px;
+        fill: white;
+    }
+
+    .close-icon {
+        width: 25px;
+        height: 25px;
+        stroke: white;
+        stroke-width: 2;
+    }
+
+    /* Navigation Links */
+    .nav-links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-wrap: nowrap; /* Default desktop layout */
+        gap: 1.5rem;
+        transition: all 0.3s ease-in-out;
+    }
+    
+    .nav-links li {
+        font-size: clamp(0.875rem, 2vw, 1rem);
+        font-weight: 400;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+    }
+
+    .nav-links a {
+        position: relative;
+        transition: color 0.3s ease;
+    }
+
+    .nav-links a::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 1px;
+        bottom: -5px;
+        left: 50%;
+        background-color: #fff;
+        transition: all 0.3s ease;
+    }
+
+    .nav-links a:hover::after {
+        width: 100%;
+        left: 0;
+    }
+
+    /* Mobile Styles */
+    @media (max-width: 767px) {
+        .hamburger-menu {
+            display: block; /* Show hamburger on mobile */
+        }
+
+        .navbar-content {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 1rem;
+        }
+
+        .nav-links {
+            display: none; /* Hide nav links by default on mobile */
+            flex-direction: column;
+            position: absolute;
+            top: 120px; /* Adjust based on navbar height */
+            left: 0;
+            width: 100%;
+            height: calc(50vh - 60px);
+            background-color: rgba(0, 0, 0, 0.95);
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            z-index: 20;
+            overflow: hidden;
+        }
+
+        .nav-links.active {
+            display: flex; /* Show nav links when active */
+        }
+
+        .names {
+            margin-bottom: 0;
+        }
+    }
+
+    /* Main Content */
+    .main-content {
+        padding: 2rem;
+        text-align: center;
+    }
+
+    .main-content h1 {
+        font-size: clamp(2rem, 6vw, 4rem);
+        font-weight: 600;
+        color: #fff;
+    }

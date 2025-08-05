@@ -1,0 +1,138 @@
+
+  
+
+        /* App Container - Dark Theme Background with Image */
+        .app-container {
+          min-height: 100vh;
+          background-color: #0a0a0a; /* Fallback dark background */
+          background-image: url('/Entourage/bg.png'); /* Placeholder image */
+          background-size: cover; /* Cover the entire container */
+          background-position: center; /* Center the image */
+          background-attachment: relative; /* Keep image fixed during scroll */
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 3rem 1rem;
+          color: #f0f0f0; /* Light text color */
+          position: relative; /* Needed for overlay */
+        }
+
+        /* Dark overlay to ensure text readability */
+        .app-container::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: rgba(0, 0, 0, 0.5); /* 50% black overlay */
+          z-index: 0; /* Behind content */
+        }
+
+        /* Ensure content is above the overlay */
+        .content-box, .entourage-heading, .nuptials-title {
+            position: relative;
+            z-index: 1;
+        }
+
+
+        @media (min-width: 640px) {
+          .app-container {
+            padding: 3rem 1.5rem;
+          }
+        }
+
+        @media (min-width: 1024px) {
+          .app-container {
+            padding: 3rem 2rem;
+          }
+        }
+
+        /* Main Content Box - Dark Theme */
+        .content2-box {
+          max-width: 90rem;
+          width: 100%;
+          padding: 2.5rem;
+          border-radius: 0.5rem;
+          border: 1px solid #333333; /* Subtle dark border */
+          box-sizing: border-box;
+        }
+
+        .content2-box > *:not(:last-child) {
+          margin-bottom: 2rem;
+        }
+
+        /* Main Heading */
+        .entourage-heading {
+          font-size: 3rem;
+          font-weight: 800;
+          text-align: center;
+          color: #ffffff; /* Pure white text */
+          margin-bottom: 3rem;
+          letter-spacing: -0.05em;
+        }
+
+        /* Nuptials Title */
+        .nuptials-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            color: #ffffff;
+            margin-bottom: 2rem;
+        }
+
+        /* Entourage Section - Base styles for in-view animation */
+        .entourage-section {
+          background-color: rgba(34, 34, 34, 0.9); /* Slightly transparent darker item background */
+          border: 1px solid #444444; /* Darker border for items */
+          border-radius: 0.5rem;
+          padding: 1.5rem;
+          margin-bottom: 2rem; /* Space between sections */
+          opacity: 0; /* Initial state for animation */
+          transform: translateY(20px); /* Initial state for slide-up animation */
+          transition: opacity 800ms ease-out, transform 800ms ease-out; /* Animation properties */
+        }
+
+        /* Visible state - section moves to its final position */
+        .entourage-section.is-visible {
+          opacity: 1;
+          transform: translateY(0);
+        }
+
+        /* Section Title (e.g., Parents of the Groom) */
+        .section-title {
+          font-size: 1.75rem;
+          font-weight: 600;
+          color: #ffffff; /* White text for titles */
+          margin-bottom: 1rem;
+          border-bottom: 1px solid #444444; /* Subtle separator */
+          padding-bottom: 0.5rem;
+        }
+
+        /* Name List */
+        .name-list {
+          list-style: none; /* Remove default list bullets */
+          padding: 0;
+          margin: 0;
+          display: grid; /* Use grid for responsive columns */
+          grid-template-columns: 1fr; /* Single column by default */
+          gap: 0.5rem; /* Space between names */
+        }
+
+        @media (min-width: 768px) { /* Two columns for larger screens */
+          .name-list {
+            grid-template-columns: 1fr 1fr;
+          }
+        }
+
+        /* Individual Name Item */
+        .name-item {
+          font-size: 1.1rem;
+          color: #e0e0e0; /* Slightly off-white for names */
+          line-height: 1.5;
+        }
+
+        /* Bold text for roles like VEIL, CANDLE, CORD */
+        .name-item strong {
+            color: #ffffff;
+        }

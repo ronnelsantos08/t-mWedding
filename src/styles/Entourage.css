@@ -1,0 +1,140 @@
+
+
+/* App Container - Dark Theme Background */
+.app-container {
+  min-height: 100vh;
+  background-color: #0a0a0a; /* Very dark background for elegance */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1rem;
+  color: #f0f0f0; /* Light text color */
+}
+
+@media (min-width: 640px) {
+  .app-container {
+    padding: 3rem 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .app-container {
+    padding: 3rem 2rem;
+  }
+}
+
+/* Main Content Box - Dark Theme */
+.content-box {
+  max-width: 100rem;
+  width: 100%;
+  padding: 2.5rem;
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+}
+
+.content-box > *:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+/* Heading - White Text */
+.program-heading {
+  font-size: 3rem;
+  font-weight: 800;
+  text-align: center;
+  color: #ffffff; /* Pure white text */
+  margin-bottom: 3rem;
+  letter-spacing: -0.05em;
+}
+
+/* Program List (Timeline Container) */
+.program-list {
+  position: relative;
+  padding-top: 1px; /* Small padding to ensure line starts correctly */
+}
+
+/* Vertical Line in the Middle */
+.program-list::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px; /* Thickness of the line */
+  background-color: #555555; /* Color of the line */
+  transform: translateX(-50%);
+  z-index: 1; /* Ensure line is behind items */
+}
+
+/* Program Item - Base styles */
+.program-item {
+  position: relative;
+  z-index: 2;
+  width: calc(50% - 1.5rem); /* Half width minus margin from the center line */
+  margin-bottom: 2.5rem; /* Space between items */
+  padding: 1.5rem;
+  border: 1px solid #444444; /* Darker border for items */
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  color: #f0f0f0; /* Light text color for items */
+  transition: transform 1000ms ease-out, opacity 1000ms ease-out;
+  opacity: 0; /* Initial state for animation */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Alternating positioning and initial transform for left-to-right animation */
+.program-list .program-item.item-left {
+  margin-left: 0;
+  margin-right: auto; /* Push to left side of the timeline */
+  transform: translateX(-2.5rem); /* Initial state for left items */
+}
+
+.program-list .program-item.item-right {
+  margin-right: 0;
+  margin-left: auto; /* Push to right side of the timeline */
+  transform: translateX(2.5rem); /* Initial state for right items */
+}
+
+/* Visible state - items move to their final position */
+.program-item.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Program Time */
+.program-time {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff; /* Pure white text */
+  margin-bottom: 0.5rem;
+  width: 100%;
+  text-align: center;
+}
+
+/* Program Event */
+.program-event {
+  font-size: 1.25rem;
+  color: #e0e0e0; /* Slightly off-white for event text */
+  width: 100%;
+  text-align: center;
+}
+
+/* Responsive adjustments for program item content */
+@media (min-width: 768px) {
+  .program-item {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .program-time {
+    margin-bottom: 0;
+    width: 25%;
+    text-align: right;
+    padding-right: 1rem; /* Space between time and event */
+  }
+  .program-event {
+    width: 75%;
+    text-align: left;
+    padding-left: 1rem; /* Space between time and event */
+  }
+}
