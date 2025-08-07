@@ -2,18 +2,10 @@
     @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Great+Vibes&family=Lavishly+Yours&display=swap');
 
     /* General styling */
-    body {
-        font-family: 'Cormorant Garamond', serif;
-        background-color: #000;
-        color: #fff;
-        margin: 0;
-        padding: 0;
-        line-height: 1.6;
-    }
+ 
 
     .dc-dress-code-container {
-        padding: clamp(3rem, 8vw, 6rem) clamp(1rem, 5vw, 4rem);
-        max-width: 1200px;
+        padding: clamp(3rem, 8vw, 100rem) clamp(1rem, 5vw, 100rem);
         margin: 0 auto;
         text-align: center;
         overflow: hidden;
