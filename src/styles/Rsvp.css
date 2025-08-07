@@ -15,7 +15,7 @@
 
   .rsvp-container {
     width: 100%;
-    max-width: 1200px;
+    max-width: 80%;
     min-height: 100vh;
     padding: clamp(2rem, 4vw, 5rem) clamp(1rem, 3vw, 100rem);
     margin: 2rem auto;
@@ -23,7 +23,6 @@
     font-family: 'Inter', sans-serif;
     position: relative;
     overflow: visible;
-    border-radius: 1rem;
   
     background-color: rgba(0, 0, 0, 0.85);
     box-shadow:
