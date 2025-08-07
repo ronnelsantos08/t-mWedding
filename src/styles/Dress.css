@@ -114,12 +114,10 @@
         width: auto;
         height: clamp(8rem, 20vw, 100rem); /* Responsive height for images */
         object-fit: cover;
-        filter: grayscale(100%) brightness(0.7); /* Grayscale effect */
         transition: filter 0.3s ease, transform 0.3s ease;
     }
 
     .dc-gallery-image:hover {
-        filter: grayscale(0%) brightness(1); /* Color on hover */
         transform: scale(1.03); /* Slight zoom on hover */
     }
 
