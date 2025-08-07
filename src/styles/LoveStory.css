@@ -53,7 +53,6 @@
                         max-height: 350px;
                         object-fit: cover;
                         border-radius: 8px;
-                        filter: grayscale(100%) brightness(0.7);
                         border: 1px solid rgba(255, 255, 255, 0.2);
                     }
 

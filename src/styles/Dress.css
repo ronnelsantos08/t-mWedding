@@ -1,0 +1,185 @@
+
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Great+Vibes&family=Lavishly+Yours&display=swap');
+
+    /* General styling */
+    body {
+        font-family: 'Cormorant Garamond', serif;
+        background-color: #000;
+        color: #fff;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+    }
+
+    .dc-dress-code-container {
+        padding: clamp(3rem, 8vw, 6rem) clamp(1rem, 5vw, 4rem);
+        max-width: 1200px;
+        margin: 0 auto;
+        text-align: center;
+        overflow: hidden;
+        background-color: #000; /* Solid black background */
+        color: #fff;
+    }
+
+    .dc-section-title {
+        font-family: 'Great Vibes', cursive;
+        font-size: clamp(2.5rem, 8vw, 5rem);
+        margin-bottom: clamp(1.5rem, 4vw, 3rem);
+        color: #fff;
+        opacity: 0;
+        transition: all 1s ease-out;
+    }
+
+    .dc-main-attire-text {
+        font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+        font-weight: 600;
+        margin-bottom: clamp(2rem, 5vw, 4rem);
+        color: rgba(255, 255, 255, 0.9);
+        opacity: 0;
+        transition: all 1s ease-out;
+    }
+
+    /* Two-column layout for attire details */
+    .dc-attire-details-wrapper {
+        display: flex;
+        flex-wrap: wrap; /* Allow wrapping on smaller screens */
+        justify-content: center;
+        gap: clamp(1.5rem, 4vw, 3rem);
+        margin-bottom: clamp(3rem, 8vw, 5rem);
+    }
+
+    .dc-attire-column {
+        flex: 1;
+        min-width: 280px; /* Minimum width before wrapping */
+        max-width: 45%; /* Max width for two columns */
+        background-color: rgba(255, 255, 255, 0.05);
+        border-radius: 10px;
+        padding: clamp(1.5rem, 4vw, 2.5rem);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        text-align: left; /* Align text within columns */
+        opacity: 0;
+        transition: all 1s ease-out;
+    }
+
+    .dc-attire-subtitle {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: clamp(1.8rem, 4vw, 2.5rem);
+        font-weight: 600;
+        margin-bottom: 1rem;
+        color: #fff;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+
+    .dc-attire-list {
+        list-style: none; /* Remove default list style */
+        padding: 0;
+        margin: 0 0 1.5rem 0;
+        font-size: clamp(0.9rem, 2vw, 1.1rem);
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+    .dc-attire-list li {
+        margin-bottom: 0.5rem;
+    }
+
+    .dc-attire-restrictions {
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.6);
+        font-size: clamp(0.85rem, 1.9vw, 1rem);
+    }
+
+    /* Image Gallery below text - Modified for 3 images, no wrap on mobile */
+    .dc-image-gallery {
+        display: flex;
+        flex-wrap: nowrap; /* Forces images to stay in one row */
+        justify-content: center;
+        gap: clamp(.1rem, 3vw, 2rem);
+        margin-bottom: clamp(3rem, 8vw, 5rem);
+        opacity: 0;
+        transition: all 1s ease-out;
+        overflow-x: auto; /* Enables horizontal scrolling if content overflows */
+        -webkit-overflow-scrolling: touch; /* For smooth scrolling on iOS */
+        padding-bottom: 10px; /* Space for scrollbar */
+    }
+
+    .dc-gallery-image-wrapper {
+        flex-shrink: 0; /* Prevents images from shrinking below their content size */
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .dc-gallery-image {
+        width: auto;
+        height: clamp(8rem, 20vw, 100rem); /* Responsive height for images */
+        object-fit: cover;
+        filter: grayscale(100%) brightness(0.7); /* Grayscale effect */
+        transition: filter 0.3s ease, transform 0.3s ease;
+    }
+
+    .dc-gallery-image:hover {
+        filter: grayscale(0%) brightness(1); /* Color on hover */
+        transform: scale(1.03); /* Slight zoom on hover */
+    }
+
+    /* Color Palette Section */
+    .dc-color-palette-wrapper {
+        margin-top: clamp(3rem, 8vw, 5rem); /* Space from previous section */
+        opacity: 0;
+        transition: all 1s ease-out;
+    }
+
+    .dc-color-palette-wrapper h2 {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: clamp(1.8rem, 4vw, 2.5rem);
+        font-weight: 600;
+        margin-bottom: 2rem;
+        color: #fff;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+
+    .dc-color-swatches {
+        display: flex;
+        justify-content: center;
+        gap: clamp(0.8rem, 2vw, 1.5rem); /* Responsive gap between swatches */
+        flex-wrap: wrap; /* Allow wrapping on small screens */
+    }
+
+    .dc-color-swatch {
+        width: clamp(50px, 10vw, 80px); /* Responsive size for circles */
+        height: clamp(50px, 10vw, 80px);
+        border-radius: 50%;
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s ease;
+    }
+
+    .dc-color-swatch:hover {
+        transform: scale(1.1); /* Slight enlarge on hover */
+    }
+
+
+    /* Animation classes (re-using existing ones) */
+    .initial-fade-up { opacity: 0; transform: translateY(50px); }
+    .animate-fade-up { opacity: 1; transform: translateY(0); }
+
+    .initial-fade-in { opacity: 0; }
+    .animate-fade-in { opacity: 1; }
+
+    .initial-slide-left { opacity: 0; transform: translateX(-50px); }
+    .animate-slide-left { opacity: 1; transform: translateX(0); }
+
+    .initial-slide-right { opacity: 0; transform: translateX(50px); }
+    .animate-slide-right { opacity: 1; transform: translateX(0); }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .dc-attire-column {
+            max-width: 100%; /* Stack columns on small screens */
+        }
+        /* For images, the 'flex-wrap: nowrap;' and 'overflow-x: auto;'
+           on .dc-image-gallery, combined with 'min-width' on .dc-gallery-image-wrapper
+           will ensure they don't wrap and enable horizontal scrolling if needed. */
+    }

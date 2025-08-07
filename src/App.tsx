@@ -1,3 +1,4 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/navbar";
 import Hero from "./components/Hero";
 import Invite from "./components/Invite";
@@ -6,19 +7,33 @@ import Prenup from "./components/Prenup";
 import Location from "./components/Location";
 import Entourage from "./components/Entourage";
 import Entourage2 from "./components/Entourage2";
+import Dress from "./components/Dress";
+import Footer from "./components/Footer";
 
-function App() {
+function HomePage() {
   return (
-    <div>
-      <Navbar />
+    <>
       <Hero />
       <Invite />
       <LoveStory />
       <Prenup />
       <Location />
       <Entourage />
-      <Entourage2 />
-    </div>
+      <Dress />
+    </>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/entourage" element={<Entourage2 />} />
+      </Routes>
+      <Footer />
+    </Router>
   );
 }
 

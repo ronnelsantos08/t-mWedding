@@ -38,10 +38,10 @@ const Navbar = () => {
                     
                     {/* Navigation Links */}
                     <ul className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
-                        <li><a href="#" onClick={() => setIsMenuOpen(false)}>Home</a></li>
+                        <li><a href="/" onClick={() => setIsMenuOpen(false)}>Home</a></li>
                         <li><a href="#" onClick={() => setIsMenuOpen(false)}>Prenup</a></li>
                         <li><a href="#" onClick={() => setIsMenuOpen(false)}>Location</a></li>
-                        <li><a href="#" onClick={() => setIsMenuOpen(false)}>Entourage</a></li>
+                        <li><a href="/entourage" onClick={() => setIsMenuOpen(false)}>Entourage</a></li>
                         <li><a href="#" onClick={() => setIsMenuOpen(false)}>Dresscode</a></li>
                         <li><a href="#" onClick={() => setIsMenuOpen(false)}>RSVP</a></li>
                     </ul>

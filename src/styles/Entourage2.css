@@ -2,13 +2,14 @@
   
 
         /* App Container - Dark Theme Background with Image */
-        .app-container {
+        .app2-container {
           min-height: 100vh;
           background-color: #0a0a0a; /* Fallback dark background */
-          background-image: url('/Entourage/bg.png'); /* Placeholder image */
-          background-size: cover; /* Cover the entire container */
+          background-image: url('/Entourage/bg2.png'); /* Placeholder image */
+          background-size: cover; /* Fixed width, auto height */
           background-position: center; /* Center the image */
           background-attachment: relative; /* Keep image fixed during scroll */
+          background-repeat: no-repeat; /* Repeat if there's extra space */
           display: flex;
           align-items: center;
           justify-content: center;
@@ -64,6 +65,7 @@
 
         /* Main Heading */
         .entourage-heading {
+            font-family: 'Great Vibes', cursive;
           font-size: 3rem;
           font-weight: 800;
           text-align: center;
@@ -74,6 +76,7 @@
 
         /* Nuptials Title */
         .nuptials-title {
+            font-family: "Alumni Sans Pinstripe", sans-serif;
             font-size: 2.5rem;
             font-weight: 700;
             text-align: center;
@@ -84,7 +87,8 @@
         /* Entourage Section - Base styles for in-view animation */
         .entourage-section {
           background-color: rgba(34, 34, 34, 0.9); /* Slightly transparent darker item background */
-          border: 1px solid #444444; /* Darker border for items */
+          border-bottom: 1px solid rgb(215, 215, 215);
+          box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
           border-radius: 0.5rem;
           padding: 1.5rem;
           margin-bottom: 2rem; /* Space between sections */
@@ -101,6 +105,7 @@
 
         /* Section Title (e.g., Parents of the Groom) */
         .section-title {
+            font-family: "Alumni Sans Pinstripe", sans-serif;
           font-size: 1.75rem;
           font-weight: 600;
           color: #ffffff; /* White text for titles */

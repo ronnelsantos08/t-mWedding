@@ -113,7 +113,7 @@ const Section: React.FC<SectionProps> = ({ children, delay }) => {
 // Main Entourage component that renders the wedding party details
 const Entourage2: React.FC = () => {
   return (
-    <div className="app-container">
+    <div className="app2-container">
       
       <div className="content2-box">
         <h1 className="entourage-heading">Wedding Entourage</h1>

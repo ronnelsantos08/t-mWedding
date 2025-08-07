@@ -174,7 +174,7 @@ import '../styles/Hero.css'
                             October 16, 2025
                         </h2>
                         <div className="music-player">
-        <audio controls autoPlay loop>
+        <audio controls>
           <source src="/Audio/music.mp3" type="audio/mp3" />
           Your browser does not support the audio element.
         </audio>

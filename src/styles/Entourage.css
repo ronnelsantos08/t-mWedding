@@ -3,12 +3,17 @@
 /* App Container - Dark Theme Background */
 .app-container {
   min-height: 100vh;
-  background-color: #0a0a0a; /* Very dark background for elegance */
+  background-color: #0a0a0a; /* Fallback dark background */
+  background-image: url('/Entourage/bg.png'); /* Placeholder image */
+  background-size: cover; /* Cover the entire container */
+  background-position: center; /* Center the image */
+  background-attachment: relative; /* Keep image fixed during scroll */
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 3rem 1rem;
   color: #f0f0f0; /* Light text color */
+  position: relative; /* Needed for overlay */
 }
 
 @media (min-width: 640px) {
@@ -28,7 +33,6 @@
   max-width: 100rem;
   width: 100%;
   padding: 2.5rem;
-  border-radius: 0.5rem;
   box-sizing: border-box;
 }
 
@@ -38,7 +42,8 @@
 
 /* Heading - White Text */
 .program-heading {
-  font-size: 3rem;
+  font-family: 'Great Vibes', cursive;
+  font-size: 4rem;
   font-weight: 800;
   text-align: center;
   color: #ffffff; /* Pure white text */
@@ -72,9 +77,9 @@
   width: calc(50% - 1.5rem); /* Half width minus margin from the center line */
   margin-bottom: 2.5rem; /* Space between items */
   padding: 1.5rem;
-  border: 1px solid #444444; /* Darker border for items */
   border-radius: 0.5rem;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgb(215, 215, 215);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
   color: #f0f0f0; /* Light text color for items */
   transition: transform 1000ms ease-out, opacity 1000ms ease-out;
   opacity: 0; /* Initial state for animation */
