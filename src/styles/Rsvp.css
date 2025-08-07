@@ -1,0 +1,230 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Poiret+One&family=Inter:wght@400;600&display=swap');
+
+  /* Keyframe animation for fade-in effect */
+  @keyframes fade-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .rsvp-container {
+    width: 100%;
+    max-width: 1200px;
+    min-height: 100vh;
+    padding: clamp(2rem, 4vw, 5rem) clamp(1rem, 3vw, 100rem);
+    margin: 2rem auto;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    position: relative;
+    overflow: visible;
+    border-radius: 1rem;
+  
+    background-color: rgba(0, 0, 0, 0.85);
+    box-shadow:
+      0 0 15px rgba(255, 255, 255, 0.746),  /* soft outer glow */
+      0 0 25px rgba(238, 238, 238, 0.733), /* further subtle glow */
+      0 0 40px rgba(255, 255, 255, 0.542);  /* outer faint glow */
+  
+    z-index: 1;
+    border: 1px solid rgb(255, 255, 255); /* faint border line */
+    
+  }
+  
+  
+  .rsvp-container::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url('/Prenup/Prenup4.jpeg'); /* Put your image here */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter:  brightness(60%) blur(4px); /* Blur + darken */
+    opacity: 1;
+    z-index: -1;
+    pointer-events: none;
+  }
+  
+  
+  .rsvp-container.in-view > *:not(.decoration-img) {
+    animation: fade-in-up 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
+  }
+  
+
+  .rsvp-heading {
+    font-family: "Poiret One", sans-serif;
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 700;
+    color: #ffffff; /* White text */
+    margin-bottom: 1rem;
+    z-index: 1;
+  }
+
+  .rsvp-paragraph {
+    font-family: "Poiret One", sans-serif;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    color: #e0e0e0; /* Light gray text */
+    font-weight: 600;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+    z-index: 1;
+  }
+
+  .rsvp-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
+    z-index: 1;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-group label {
+    font-family: "Poiret One", sans-serif;
+    font-size: clamp(1rem, 1vw, 1.2rem);
+    font-weight: 600;
+    color: #ffffff; /* White labels */
+    margin-bottom: 0.5rem;
+  }
+
+  .form-group input[type="text"],
+  .form-group input[type="tel"],
+  .form-group input[type="number"],
+  .form-group textarea {
+    padding: clamp(0.6rem, 1vw, 0.9rem);
+    border: 1px solid #444444; /* Dark gray border */
+    border-radius: 0.5rem;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    color: #e0e0e0; /* Light text color */
+    background-color: #333333; /* Dark gray input background */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .form-group input:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: #aaaaaa; /* Lighter gray focus border */
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.1);
+  }
+
+  .form-group textarea {
+    min-height: 80px;
+    resize: vertical;
+  }
+
+  .radio-group {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    margin-top: 0.5rem;
+  }
+
+  .radio-group label {
+    display: flex;
+    align-items: center;
+    font-weight: normal;
+    color: #e0e0e0; /* Light gray for radio labels */
+    cursor: pointer;
+    font-size: clamp(0.9rem, 2vw, 1rem); /* Match font size */
+    font-family: 'Inter', sans-serif; /* Use Inter for body text */
+  }
+
+  .radio-group input[type="radio"] {
+    margin-right: 0.5rem;
+    accent-color: #ffffff; /* White accent color for radio buttons */
+  }
+
+  .submit-button {
+    font-family: "Poiret One", sans-serif;
+    display: inline-block;
+    padding: clamp(0.7rem, 1vw, 1rem) clamp(1.2rem, 3vw, 2rem);
+    background: linear-gradient(90deg, #444444 0%, #000000 100%); /* Dark gradient */
+    color: #ffffff;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    font-weight: 800;
+    text-decoration: none;
+    border: none;
+    border-radius: 0.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    margin-top: 1.5rem;
+  }
+
+  .submit-button:hover:not(:disabled) {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  .submit-button:active:not(:disabled) {
+    transform: translateY(0);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .submit-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  .submission-message {
+    margin-top: 1rem;
+    font-size: clamp(0.95rem, 2vw, 1.1rem);
+    font-weight: 600;
+    color: #ffffff; /* White text for messages */
+  }
+
+  .submission-message.success {
+    color: #28a745;
+  }
+
+  .submission-message.error {
+    color: #dc3545;
+  }
+
+/* Decoration image styling */
+.deco-img {
+    position: absolute;
+    width: clamp(5rem, 10vw, 100rem);
+    height: auto;
+    z-index: 10;
+    animation: bounce 4s infinite ease-in-out;
+    pointer-events: none;
+  }
+  
+  .deco-bottom-right {
+    bottom: -50px;
+    right: 20px;
+    animation-delay: 0.5s;
+  }
+  
+  .deco-top-left {
+    top: -50px;
+    left: 20px;
+    animation-delay: 0s;
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-15px);
+    }
+  }
+  
+  
+
+  

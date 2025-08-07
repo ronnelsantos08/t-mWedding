@@ -8,6 +8,7 @@ import Location from "./components/Location";
 import Entourage from "./components/Entourage";
 import Entourage2 from "./components/Entourage2";
 import Dress from "./components/Dress";
+import Rsvp from "./components/Rsvp";
 import Footer from "./components/Footer";
 
 function HomePage() {
@@ -20,6 +21,7 @@ function HomePage() {
       <Location />
       <Entourage />
       <Dress />
+      <Rsvp />
     </>
   );
 }
