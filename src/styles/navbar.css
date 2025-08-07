@@ -12,9 +12,16 @@
 
     /* Navbar Container */
     .navbar {
-        padding: 1rem;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 100; /* Keep above other content */
         border-bottom: 1px solid rgb(215, 215, 215);
         box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+        background-color: rgba(0, 0, 0, 0.8); /* Optional: make it slightly see-through */
+        backdrop-filter: blur(10px); /* Optional: adds a nice blur behind */
+        transition: background-color 0.3s ease;
     }
 
     .navbar-content {
@@ -24,6 +31,7 @@
         align-items: center;
         max-width: 1200px;
         margin: 0 10%;
+        max-height: 8vh;
         transition: flex-direction 0.3s ease;
     }
 

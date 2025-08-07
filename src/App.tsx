@@ -14,14 +14,24 @@ import Footer from "./components/Footer";
 function HomePage() {
   return (
     <>
+    
       <Hero />
       <Invite />
       <LoveStory />
-      <Prenup />
-      <Location />
+      <div id="prenup">
+        <Prenup />
+      </div>
+      <div id="location">
+        <Location />
+      </div>
       <Entourage />
+      <div id="dresscode">
       <Dress />
+      </div>
+      <div id="rsvp">
       <Rsvp />
+      </div>
+      
     </>
   );
 }
