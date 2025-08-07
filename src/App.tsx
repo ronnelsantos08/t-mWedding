@@ -9,6 +9,7 @@ import Entourage from "./components/Entourage";
 import Entourage2 from "./components/Entourage2";
 import Dress from "./components/Dress";
 import Rsvp from "./components/Rsvp";
+import Gift from "./components/Gift";
 import Footer from "./components/Footer";
 
 function HomePage() {
@@ -31,6 +32,7 @@ function HomePage() {
       <div id="rsvp">
       <Rsvp />
       </div>
+      <Gift />
       
     </>
   );

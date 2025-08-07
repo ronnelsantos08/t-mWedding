@@ -72,7 +72,7 @@ const Entourage: React.FC = () => {
     
       <div className="content-box">
         <h1 className="program-heading">
-          Our Program
+          Timeline
         </h1>
         <div className="program-list">
           {program.map((item, index) => (

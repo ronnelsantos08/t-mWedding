@@ -4,7 +4,7 @@ import '../styles/Rsvp.css';
 const Rsvp = () => {
   const rsvpDetails = {
     title: "Kindly RSVP",
-    description: "Please let us know if you can join us by filling out the form below. Your timely response is greatly appreciated!",
+    description: "WE HAVE RESERVED ___ SEAT/S FOR YOU. RESPONSES ARE REQUIRED ON OR BEFORE SEPTEMBER 15, 2025. MARA DOMINGO - 09052926341 OR FILL OUT THE FORM",
     bgImageUrl: "/Prenup/Prenup4.jpeg",
     decorationImageUrl: "/Invite/ring2.png"
   };

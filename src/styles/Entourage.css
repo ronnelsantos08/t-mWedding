@@ -43,7 +43,7 @@
 /* Heading - White Text */
 .program-heading {
   font-family: 'Great Vibes', cursive;
-  font-size: 4rem;
+  font-size: clamp(2.5rem, 8vw, 5rem);
   font-weight: 800;
   text-align: center;
   color: #ffffff; /* Pure white text */
