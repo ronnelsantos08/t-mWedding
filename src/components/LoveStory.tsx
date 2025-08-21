@@ -13,8 +13,8 @@ const LoveStory = () => {
         },
         {
             date: 'August 2021',
-            title: 'The Great Adventure',
-            description: 'Our first big trip together, exploring new landscapes and falling deeper in love with every shared moment and unexpected detour.',
+            title: 'A Song Between Us',
+            description: 'Our next encounter felt like a chorus repeating. You hummed to the café’s guitar, I joined softly, and suddenly the world disappeared, just two hearts keeping time with the same song.',
             image: '/LoveStory/lovestory2.jpg',
             alignment: 'right'
         },

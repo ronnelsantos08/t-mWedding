@@ -36,7 +36,7 @@ import '../styles/Hero.css'
         const animationEffects = ['fade-up', 'fade-right', 'fade-in'];
     
         // The target date for the wedding
-        const weddingDate = new Date('October 16, 2025 00:00:00');
+        const weddingDate = new Date('October 16, 2025 15:00:00');
     
         // Function to calculate the time remaining until the wedding date
         const calculateTimeLeft = () => {

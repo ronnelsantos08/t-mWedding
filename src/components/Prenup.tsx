@@ -3,7 +3,7 @@ import '../styles/Prenup.css'
 
 const Prenup = () => {
     // Array of placeholder image URLs for the gallery
-    const images = Array.from({ length: 20 }, (_, i) => `/Prenup/Prenup${i + 1}.jpeg`);
+    const images = Array.from({ length: 26 }, (_, i) => `/Prenup/Prenup${i + 1}.jpeg`);
 
     // State to track in-view status for each image
     const [inViewStates, setInViewStates] = useState(images.map(() => false));
