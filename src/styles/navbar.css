@@ -36,9 +36,17 @@
 
     /* Couple's Names - now using a cursive font */
   .names h1 {
-    font-family: "Sassy Frass", cursive;
+        font-family: "Cinzel", "Times New Roman", serif;
         font-weight: 400; /* Great Vibes doesn't have a bold variant */
-        font-size: clamp(.1rem, 3vw, 100rem);
+        font-size: clamp(.1rem, 2.5vw, 100rem);
+        letter-spacing: 0.1em;
+        text-transform: none; /* Cursive fonts look better without uppercase */
+    }
+
+    .nav-and {
+        font-family: "Miss Fajardose", cursive;
+        font-weight: 400; /* Great Vibes doesn't have a bold variant */
+        font-size: clamp(.1rem, 2.5vw, 100rem);
         letter-spacing: 0.1em;
         text-transform: none; /* Cursive fonts look better without uppercase */
     }
@@ -145,7 +153,7 @@
             margin-bottom: 0;
         }
         .names h1 {
-            font-size: clamp(.1rem, 6vw, 3rem);
+            font-size: clamp(.1rem, 4vw, 3rem);
         }
     }
 

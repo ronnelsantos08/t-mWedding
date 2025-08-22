@@ -3,7 +3,7 @@
 
     /* General styling */
     body {
-        font-family: 'Cormorant Garamond', serif;
+        font-family: "Cinzel", "Times New Roman", serif;
         background-color: #000;
         color: #fff;
         margin: 0;
@@ -20,8 +20,8 @@
     }
 
     .gallery-title {
-        font-family: 'Great Vibes', cursive;
-        font-size: clamp(2.5rem, 8vw, 5rem);
+        font-family: "Cinzel", "Times New Roman", serif;
+        font-size: clamp(2rem, 3vw, 100rem);
         margin-bottom: 3rem;
         color: #fff;
     }

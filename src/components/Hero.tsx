@@ -159,7 +159,7 @@ import '../styles/Hero.css'
                             ref={titleRef} 
                             className={`main-title ${titleInView ? `animate-${titleEffect}` : `initial-${titleEffect}`}`}
                         >
-                            Tristan & Mara
+                            Tristan <span className='and'>and</span> Mara
                         </h1>
                         <h2 
                             ref={subtitleRef} 

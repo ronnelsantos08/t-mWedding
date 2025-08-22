@@ -42,9 +42,9 @@
 
 /* Heading - White Text */
 .program-heading {
-  font-family: 'Great Vibes', cursive;
+  font-family: "Cinzel", "Times New Roman", serif;
   font-size: clamp(2.5rem, 8vw, 5rem);
-  font-weight: 800;
+  font-weight: 600;
   text-align: center;
   color: #ffffff; /* Pure white text */
   margin-bottom: 3rem;

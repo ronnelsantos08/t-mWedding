@@ -20,7 +20,7 @@ const Navbar = () => {
                     
                     {/* Couple's Names */}
                     <div className="names">
-                        <h1>Tristan and Mara</h1>
+                        <h1>Tristan <span className='nav-and'>and</span> Mara</h1>
                     </div>
                     
                     {/* Hamburger menu button for mobile */}

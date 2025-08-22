@@ -44,18 +44,24 @@
     }
 
     .main-title {
-        font-family: 'Great Vibes', cursive;
-        font-size: clamp(3rem, 10vw, 8rem);
+        font-family: "Cinzel", "Times New Roman", serif;
+        font-size: clamp(1rem, 6vw, 100rem);
         font-weight: 400;
         margin: 0;
     }
 
     .sub-title {
-        font-size: clamp(1.5rem, 5vw, 2rem);
+        font-size: clamp(1rem, 2vw, 100rem);
         letter-spacing: 0.2em;
         font-weight: 600;
         margin-top: 1rem;
         text-transform: uppercase;
+    }
+    .and {
+        font-family: "Miss Fajardose", cursive;
+        font-size: clamp(1rem, 5vw, 100rem);
+        font-weight: 400;
+        margin: 0;
     }
     
     /* Animation classes */

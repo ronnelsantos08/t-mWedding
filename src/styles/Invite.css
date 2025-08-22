@@ -42,9 +42,9 @@ box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
     
     /* Styles for the main invitation text */
     .invitation-text {
-        font-family: "Lavishly Yours", cursive;
+        font-family: "Cinzel", "Times New Roman", serif;
         margin-top: 10%;
-        font-size: clamp(2rem, 3vw, 4rem); /* Adjusted max font size for readability */
+        font-size: clamp(1.2rem, 2vw, 100rem); /* Adjusted max font size for readability */
         font-weight: 400;
         line-height: 1.5;
         text-transform: none;
@@ -95,9 +95,10 @@ box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
     }
 
     .message-section h2 {
-        font-family: 'Great Vibes', cursive;
-        font-size: clamp(1.5rem, 2vw, 3rem); /* Adjusted max font size */
+        font-family: "Cinzel", "Times New Roman", serif;
+        font-size: clamp(1.2rem, 2vw, 100rem); /* Adjusted max font size */
         margin-bottom: 1rem;
+        font-weight: 400;
     }
     
     .message-section img {

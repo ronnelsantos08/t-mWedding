@@ -3,7 +3,7 @@
 
      /* Base styles for the body to ensure consistent theme */
      body {
-         font-family: 'Cormorant Garamond', serif;
+        font-family: "Cinzel", "Times New Roman", serif;
          background-color: #000;
          color: #fff;
          margin: 0;
@@ -22,8 +22,8 @@
 
      /* Title styling */
      .venue-section-title {
-         font-family: 'Great Vibes', cursive;
-         font-size: clamp(2.5rem, 8vw, 5rem); /* Responsive font size */
+        font-family: "Cinzel", "Times New Roman", serif;
+        font-size: clamp(2rem, 3vw, 100rem);
          margin-bottom: clamp(2rem, 5vw, 4rem); /* Responsive margin */
          color: #fff;
          opacity: 0; /* Initial state for animation */
@@ -62,14 +62,16 @@
      }
 
      .venue-block-type {
-         font-family: 'Great Vibes', cursive;
+        font-family: "Cinzel", "Times New Roman", serif;
          font-size: clamp(2rem, 5vw, 3rem); /* Responsive font size */
          margin-bottom: 0.5rem;
          color: #fff;
+         font-weight: 400;
      }
 
      .venue-block-name {
-         font-size: clamp(1.2rem, 3vw, 1.8rem); /* Responsive font size */
+         font-size: clamp(1.2rem, 1.2vw, 100rem); /* Responsive font size */
+         font-weight: 200;
          margin-bottom: 1rem;
          color: rgba(255, 255, 255, 0.8);
      }
