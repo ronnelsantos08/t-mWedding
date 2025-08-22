@@ -29,9 +29,8 @@
         flex-direction: row; /* Default desktop layout */
         justify-content: space-between;
         align-items: center;
-        max-width: 1200px;
         margin: 0 10%;
-        max-height: 8vh;
+        max-height: clamp(.1rem, 10vh, 100rem);
         transition: flex-direction 0.3s ease;
     }
 
@@ -39,7 +38,7 @@
   .names h1 {
     font-family: "Sassy Frass", cursive;
         font-weight: 400; /* Great Vibes doesn't have a bold variant */
-        font-size: clamp(2rem, 6vw, 3rem);
+        font-size: clamp(.1rem, 3vw, 100rem);
         letter-spacing: 0.1em;
         text-transform: none; /* Cursive fonts look better without uppercase */
     }
@@ -73,12 +72,12 @@
         margin: 0;
         display: flex;
         flex-wrap: nowrap; /* Default desktop layout */
-        gap: 1.5rem;
+        gap: clamp(.1rem, 2vw, 100rem);
         transition: all 0.3s ease-in-out;
     }
     
     .nav-links li {
-        font-size: clamp(0.875rem, 2vw, 1rem);
+        font-size: clamp(0.875rem, 1vw, 100rem);
         font-weight: 400;
         letter-spacing: 0.05em;
         text-transform: uppercase;
@@ -144,6 +143,9 @@
 
         .names {
             margin-bottom: 0;
+        }
+        .names h1 {
+            font-size: clamp(.1rem, 6vw, 3rem);
         }
     }
 
