@@ -24,10 +24,10 @@ const Dress = () => {
 
     // Color palette for display
     const colorPalette = [
-        '#FFFFFF', // White
-        '#CCCCCC', // Light Gray
-        '#888888', // Medium Gray
-        '#444444', // Dark Gray
+        '#000000', // White
+        '#000000', // Light Gray
+        '#000000', // Medium Gray
+        '#000000', // Dark Gray
         '#000000', // Black
     ];
 
