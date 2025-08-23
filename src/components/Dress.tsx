@@ -25,10 +25,7 @@ const Dress = () => {
     // Color palette for display
     const colorPalette = [
         '#000000', // White
-        '#000000', // Light Gray
-        '#000000', // Medium Gray
-        '#000000', // Dark Gray
-        '#000000', // Black
+        
     ];
 
     // State and refs for in-view animations
