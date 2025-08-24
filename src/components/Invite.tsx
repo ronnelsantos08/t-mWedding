@@ -12,12 +12,12 @@ const Invite = () => {
 
     // States and refs for in-view animations for husband's message section
     const [husbandSectionInView, setHusbandSectionInView] = useState(false);
-    {/* const [husbandSectionAnimClass, setHusbandSectionAnimClass] = useState('');*/}
+    const [husbandSectionAnimClass, setHusbandSectionAnimClass] = useState('');
     const husbandSectionRef = useRef<HTMLDivElement>(null);
 
     // States and refs for in-view animations for wife's message section
     const [wifeSectionInView, setWifeSectionInView] = useState(false);
-     {/*const [wifeSectionAnimClass, setWifeSectionAnimClass] = useState('');*/}
+    const [wifeSectionAnimClass, setWifeSectionAnimClass] = useState('');
     const wifeSectionRef = useRef<HTMLDivElement>(null);
 
     // List of possible animation classes
@@ -26,8 +26,8 @@ const Invite = () => {
     useEffect(() => {
         // Randomly select animation effects once on mount for all elements
         setInvitationTextAnimClass(animationEffects[Math.floor(Math.random() * animationEffects.length)]);
-       {/*  setHusbandSectionAnimClass(animationEffects[Math.floor(Math.random() * animationEffects.length)]);*/}
-        {/* setWifeSectionAnimClass(animationEffects[Math.floor(Math.random() * animationEffects.length)]);*/}
+        setHusbandSectionAnimClass(animationEffects[Math.floor(Math.random() * animationEffects.length)]);
+        setWifeSectionAnimClass(animationEffects[Math.floor(Math.random() * animationEffects.length)]);
 
         // Observer for the main invitation text
         const invitationObserver = new IntersectionObserver(
@@ -75,11 +75,11 @@ const Invite = () => {
     // Base class for the main invitation text animation
     const animatedInvitationTextClass = invitationTextInView ? `animate-${invitationTextAnimClass}` : `initial-${invitationTextAnimClass}`;
 
-{/*/ Base class for husband's message section animation
+    // Base class for husband's message section animation
     const animatedHusbandSectionClass = husbandSectionInView ? `animate-${husbandSectionAnimClass}` : `initial-${husbandSectionAnimClass}`;
 
     // Base class for wife's message section animation
-    const animatedWifeSectionClass = wifeSectionInView ? `animate-${wifeSectionAnimClass}` : `initial-${wifeSectionAnimClass}`; */} 
+    const animatedWifeSectionClass = wifeSectionInView ? `animate-${wifeSectionAnimClass}` : `initial-${wifeSectionAnimClass}`;
 
     return (
         <>
@@ -106,7 +106,7 @@ const Invite = () => {
                 >
                     Together with our families, We invite you to witness our Matrimony
                 </h1>
-             {/*   <div className="couple-messages-container">
+                <div className="couple-messages-container">
                     <div 
                         ref={husbandSectionRef}
                         className={`message-section husband-section ${animatedHusbandSectionClass}`}
@@ -138,7 +138,7 @@ const Invite = () => {
                             calmest port. I am so blessed to call you mine, and I eagerly anticipate the day we say "I do."
                         </p>
                     </div> 
-    </div> */}
+                </div>
             </div>
         </>
     );

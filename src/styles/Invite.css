@@ -49,7 +49,6 @@ box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
         text-transform: none;
         padding: 2rem;
         transition: all 1s ease-out; /* Base transition */
-        margin-bottom: 20%;
     }
 
     /* Animation states for all animated elements */
@@ -85,6 +84,7 @@ box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
         align-items: center;
         gap: 2rem;
         padding: 2rem 0;
+        margin-bottom: 10%;
     }
 
     .message-section {
