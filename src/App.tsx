@@ -2,7 +2,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/navbar";
 import Hero from "./components/Hero";
 import Invite from "./components/Invite";
-import LoveStory from "./components/LoveStory";
 import Prenup from "./components/Prenup";
 import Location from "./components/Location";
 import Entourage from "./components/Entourage";
@@ -18,7 +17,6 @@ function HomePage() {
     
       <Hero />
       <Invite />
-      <LoveStory />
       <div id="prenup">
         <Prenup />
       </div>
