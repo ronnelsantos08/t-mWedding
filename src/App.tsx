@@ -6,10 +6,14 @@ import Prenup from "./components/Prenup";
 import Location from "./components/Location";
 import Entourage from "./components/Entourage";
 import Entourage2 from "./components/Entourage2";
+import Videos from "./components/Videos";
 import Dress from "./components/Dress";
 import Rsvp from "./components/Rsvp";
 import Gift from "./components/Gift";
 import Footer from "./components/Footer";
+
+const exampleVideoUrl = "/Video/video.mov";
+const exampleThumbnailUrl = "/Prenup/Prenup14.jpeg";
 
 function HomePage() {
   return (
@@ -17,6 +21,7 @@ function HomePage() {
     
       <Hero />
       <Invite />
+      <Videos videoUrl={exampleVideoUrl} videoTitle="Our Special Video" posterUrl={exampleThumbnailUrl} />
       <div id="prenup">
         <Prenup />
       </div>
