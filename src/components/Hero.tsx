@@ -8,8 +8,8 @@ import '../styles/Hero.css'
         const images = [
             '/HeroImg/hero1.jpg',
             '/HeroImg/hero2.jpg',
-            '/HeroImg/hero3.jpg',
-            '/HeroImg/hero4.jpg',
+            '/Prenup/Prenup7.jpeg',
+            '/Prenup/Prenup25.jpeg',
         ];
     
         // State to track the current image index in the carousel
