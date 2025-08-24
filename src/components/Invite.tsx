@@ -106,7 +106,7 @@ const Invite = () => {
                 >
                     Together with our families, We invite you to witness our Matrimony
                 </h1>
-                <div className="couple-messages-container">
+             {/*   <div className="couple-messages-container">
                     <div 
                         ref={husbandSectionRef}
                         className={`message-section husband-section ${animatedHusbandSectionClass}`}
@@ -137,8 +137,8 @@ const Invite = () => {
                             You came into my life and painted my world with colors I never knew existed. You are my greatest adventure and my
                             calmest port. I am so blessed to call you mine, and I eagerly anticipate the day we say "I do."
                         </p>
-                    </div>
-                </div>
+                    </div> 
+    </div> */}
             </div>
         </>
     );

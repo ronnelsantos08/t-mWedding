@@ -19,7 +19,6 @@ box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
         margin-right: auto;
         width: 90%; /* makes it more fluid for small screens */
         box-sizing: border-box;
-        min-height: 100vh;
         margin-bottom: 10%;
     }
     
@@ -43,7 +42,7 @@ box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
     /* Styles for the main invitation text */
     .invitation-text {
         font-family: "Cinzel", "Times New Roman", serif;
-        margin-top: 10%;
+        margin-top: 5%;
         font-size: clamp(1.2rem, 2vw, 100rem); /* Adjusted max font size for readability */
         font-weight: 400;
         line-height: 1.5;
